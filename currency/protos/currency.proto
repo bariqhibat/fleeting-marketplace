@@ -1,18 +1,18 @@
 syntax = "proto3";
 
-option go_package = "github.com/bariqhibat/golang-microservices/currency";
+option go_package = "./;currency";
 
 service Currency {
     rpc GetRate(RateRequest) returns (RateResponse);
 }
 
 message RateRequest {
-    string Base = 1;
-    string Destination = 2;
+    string Base = 1 [json_name="base"];
+    string Destination = 2 [json_name="destination"];
 }
 
 message RateResponse {
-    string Base = 1;
-    string Destination = 2;
-    float Rate = 3;
+    string Base = 1 [json_name="base"];
+    string Destination = 2 [json_name="destination"];
+    float Rate = 3 [json_name="rate"];
 }
