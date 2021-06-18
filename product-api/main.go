@@ -8,10 +8,12 @@ import (
 	"os/signal"
 	"time"
 
+	protos "github.com/bariqhibat/golang-microservices/currency/protos/currency"
 	"github.com/bariqhibat/golang-microservices/product-api/data"
 	"github.com/bariqhibat/golang-microservices/product-api/handlers"
 	gohandlers "github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
+	"google.golang.org/grpc"
 )
 
 func main() {
@@ -19,9 +21,18 @@ func main() {
 	l := log.New(os.Stdout, "products-api ", log.LstdFlags)
 	v := data.NewValidation()
 
-	// create the handlers
-	ph := handlers.NewProducts(l, v)
+	conn, err := grpc.Dial("localhost:9092", grpc.WithInsecure())
+	if err != nil {
+		panic(err)
+	}
 
+	defer conn.Close()
+
+	// create currency client
+	cc := protos.NewCurrencyClient(conn)
+
+	// create the handlers
+	ph := handlers.NewProducts(l, v, cc)
 	// create a new serve mux and register the handlers
 	sm := mux.NewRouter()
 
