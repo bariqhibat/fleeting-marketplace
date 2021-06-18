@@ -5,8 +5,8 @@ import (
 	"net"
 	"os"
 
-	protos "github.com/bariqhibat/golang-microservices/currency/protos/currency"
-	"github.com/bariqhibat/golang-microservices/currency/server"
+	protos "github.com/bariqhibat/fleeting-marketplace/currency/protos/currency"
+	"github.com/bariqhibat/fleeting-marketplace/currency/server"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 )

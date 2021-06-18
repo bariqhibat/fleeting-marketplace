@@ -1,4 +1,4 @@
-module github.com/bariqhibat/golang-microservices/currency
+module github.com/bariqhibat/fleeting-marketplace/currency
 
 go 1.16
 

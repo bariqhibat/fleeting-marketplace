@@ -4,8 +4,8 @@ import (
 	"context"
 	"net/http"
 
-	protos "github.com/bariqhibat/golang-microservices/currency/protos/currency"
-	"github.com/bariqhibat/golang-microservices/product-api/data"
+	protos "github.com/bariqhibat/fleeting-marketplace/currency/protos/currency"
+	"github.com/bariqhibat/fleeting-marketplace/product-api/data"
 )
 
 // swagger:route GET /products products listProducts

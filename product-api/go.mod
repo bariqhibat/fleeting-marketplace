@@ -1,9 +1,9 @@
-module github.com/bariqhibat/golang-microservices/product-api
+module github.com/bariqhibat/fleeting-marketplace/product-api
 
 go 1.16
 
 require (
-	github.com/bariqhibat/golang-microservices/currency v0.0.0-20210618173354-ae707287b24c
+	github.com/bariqhibat/fleeting-marketplace/currency v0.0.0-20210618173354-ae707287b24c
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/go-playground/universal-translator v0.17.0 // indirect
 	github.com/go-playground/validator v9.31.0+incompatible
@@ -15,4 +15,4 @@ require (
 	gopkg.in/yaml.v3 v3.0.0-20200615113413-eeeca48fe776 // indirect
 )
 
-replace github.com/bariqhibat/golang-microservices/currency => ../currency
+replace github.com/bariqhibat/fleeting-marketplace/currency => ../currency

@@ -8,9 +8,9 @@ import (
 	"os/signal"
 	"time"
 
-	protos "github.com/bariqhibat/golang-microservices/currency/protos/currency"
-	"github.com/bariqhibat/golang-microservices/product-api/data"
-	"github.com/bariqhibat/golang-microservices/product-api/handlers"
+	protos "github.com/bariqhibat/fleeting-marketplace/currency/protos/currency"
+	"github.com/bariqhibat/fleeting-marketplace/product-api/data"
+	"github.com/bariqhibat/fleeting-marketplace/product-api/handlers"
 	gohandlers "github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 	"google.golang.org/grpc"

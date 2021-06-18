@@ -4,7 +4,7 @@ import (
 	"context"
 	"log"
 
-	protos "github.com/bariqhibat/golang-microservices/currency/protos/currency"
+	protos "github.com/bariqhibat/fleeting-marketplace/currency/protos/currency"
 )
 
 type Currency struct {
