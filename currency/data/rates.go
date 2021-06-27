@@ -19,7 +19,9 @@ func NewRates(l *log.Logger) (*ExchangeRates, error) {
 		rates: map[string]float64{},
 	}
 
-	return er, nil
+	err := er.getRates()
+
+	return er, err
 }
 
 func (e *ExchangeRates) getRates() error {
